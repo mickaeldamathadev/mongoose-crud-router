@@ -38,7 +38,9 @@ const userSchema = new Schema<IUser>({
 
 ```
 
+
 You have to create a model using Core embedded schema in this package and create a CRUD express router using it:
+
 
 ´´´
 import { createCrudRouter, Core } from "mongoose-crud-router";
@@ -51,11 +53,14 @@ export default userRouter;
 
 ´´´
 
+
 ## Add routes to your router
 
 You can add extra routes or middleware to your router:
 
+
 ´´´
+
 import userRouter from "./User"
 
 // Extra route example
@@ -69,5 +74,8 @@ userRouter.use((req, res,next) => {
   next()
 });
 
+
 ´´´
+
+
 You can add them directly in your User.ts file before export router.
