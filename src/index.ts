@@ -1,6 +1,6 @@
 import { Request, Response, Router } from "express";
 import { Document, Model } from "mongoose";
-
+import Core from "./Core";
 type CrudRouterOptions<T extends Document> = {
   model: Model<T>;
 };
@@ -127,5 +127,5 @@ function createCrudRouter<T extends Document>({
   return router;
 }
 
-export { createCrudRouter };
+export { Core, createCrudRouter };
 
